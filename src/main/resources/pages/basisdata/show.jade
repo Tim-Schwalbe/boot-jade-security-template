@@ -1,0 +1,40 @@
+extends ../layout/layout.jade
+block title
+  | HealthCenterIO | Basisdaten:&nbsp;
+  = "#{profile.firstName} #{profile.lastName}"
+block headline
+  = "Basisdaten"
+block content
+  .row
+    .col-xs-2.col-sm-2.col-md-2.col-lg-2
+    .col-xs-8.col-sm-8.col-md-8.col-lg-8
+      .panel.panel-info
+        .row
+          .panel-body
+            | Basisdaten
+            .col-md-2.col-lg-2(align='center')
+              //img.img-rounded.img-responsive(alt='Avatar', src='#{_contextPath}#{profile.avatar}')
+            table.table.table-user-information
+              tbody
+                tr
+                  td _contextPath.toString():
+                  td= _contextPath.toString()
+                tr
+                  td profile.avatarPath:
+                  td= profile.avatar
+                tr
+                  td Benutzername:
+                  td= profile.username
+        .panel-footer
+          a.btn.btn-sm.btn-primary(href='mailto:#{profile.email}', data-original-title='Send Mail', data-toggle='tooltip', type='button')
+            i.glyphicon.glyphicon-envelope
+          span.pull-right
+            if authHelper.currentProfile.hasRole("ROLE_ADMIN") || authHelper.currentProfile.hasRole("ROLE_SUPERADMIN")
+              a.btn.btn-sm.btn-primary(href='#{_contextPath}/landingpage', title='Edit', data-original-title='Edit this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-edit
+              a.btn.btn-sm.btn-primary(href='#{_contextPath}/landingpage', title='Edit', data-original-title='Edit this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-remove
+            else
+              a.btn.btn-sm.btn-primary(href='#{_contextPath}/landingpage', title='Edit', data-original-title='Edit this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-edit
+    .col-xs-4.col-sm-4.col-md-4.col-lg-4

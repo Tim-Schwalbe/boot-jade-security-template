@@ -1,0 +1,130 @@
+doctype true
+html
+  head
+    meta(http-equiv="X-UA-Compatible", content="IE=EDGE; IE=9; IE=8; IE=7;")
+    meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+    meta(name="_csrf_parameter", content=_csrf.parameterName)
+    meta(name="_csrf_header", content=_csrf.headerName)
+    meta(name="_csrf", content=_csrf.token)
+
+    title
+      block title
+        | template
+
+    link(rel="shortcut icon", href="#{_contextPath}/favicon.ico", type="image/png; charset=binary")
+    link(rel="icon", href="#{_contextPath}/favicon.ico", type="image/png; charset=binary")
+
+
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/fonts.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/bootstrap-theme.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/font-awesome.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/jasny-bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/bootstrap.notify.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/bootstrap-datetimepicker.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/fileinput.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/chosen.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/style.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/css/mobile.css")
+
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/fonts.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/bootstrap-theme.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/font-awesome.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/jasny-bootstrap.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/bootstrap.notify.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/bootstrap-datetimepicker.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/fileinput.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/chosen.min.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/style.css")
+    link(rel="stylesheet", type="text/css", href="#{_contextPath}/resources/css/mobile.css")
+
+
+    script.
+      window.CONTEXT_PATH = "#{_contextPath}";
+      window.CURRENT_PAGE = "#{currentPage}";
+      window.TOTAL_PAGES = "#{totalPages}";
+
+    script(type="text/javascript", src="#{_contextPath}/js/html5shiv.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery-1.11.2.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery.history.js")
+    script(type="text/javascript", src="#{_contextPath}/js/moment.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/bootstrap.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery.editable.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/resize.sensor.js")
+    script(type="text/javascript", src="#{_contextPath}/js/element.queries.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery.waitforimages.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jasny-bootstrap.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/bootstrap.notify.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/fileinput/fileinput.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/chosen.jquery.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery.restfulizer.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/validator.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/bootstrap-paginator.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/bootstrap-datetimepicker.min.js")
+    script(type="text/javascript", src="#{_contextPath}/js/jquery.query-object.js")
+    script(type="text/javascript", src="#{_contextPath}/js/script.js")
+    script(type="text/javascript", src="#{_contextPath}/js/workflow.js")
+
+    script(type="text/javascript", src="#{_contextPath}/resources/js/html5shiv.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jquery-1.11.2.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jquery.history.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/moment.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/bootstrap.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jquery.editable.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jasny-bootstrap.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/bootstrap.notify.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/fileinput/fileinput.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/chosen.jquery.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jquery.restfulizer.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/validator.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/bootstrap-paginator.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/bootstrap-datetimepicker.min.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/jquery.query-object.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/script.js")
+    script(type="text/javascript", src="#{_contextPath}/resources/js/workflow.js")
+
+body
+  #header
+    include ./header.jade
+
+  #main
+    .container
+      #content
+        .row
+          .col-md-12
+            h1.template-h1
+              block headline
+                | template
+        .row
+          .col-md-6.col-md-offset-3.text-center
+            if error
+              .error.alert.alert-danger
+                = error
+            if errors
+              .error.alert.alert-danger
+                ul.list-unstyled
+                  each errorString in errors
+                    li= errorString
+            if warning
+              .error.alert.alert-warning
+                = warning
+            if expired
+              .error.alert.alert-danger
+                = expired
+            if accessDenied
+              .warning.warning.alert-warning
+                = accessDenied
+            if logout
+              .logged-out.alert.alert-success
+                | You successfully logged out!
+        block content
+  #footer
+    include ./footer.jade
+  .notifications.top-right
+  ul#notification.hidden
+    if notifications
+      each notification in notifications
+        li= notification
+    if notification
+      li= notification

@@ -1,0 +1,25 @@
+extends ../layout/layout.jade
+block title
+  | Service Desk | Profiles
+block headline
+  | Profiles
+block content
+  .row
+    .col-md-12
+      table.table.table-hover.table-striped
+        thead
+          th Username
+          th First Name
+          th Last Name
+          th E-Mail
+          th Created At
+          th Updated At
+        tbody
+          each profile in profiles
+            tr(onclick="javascript:window.location.href='#{_contextPath}/profile/#{profile.id}'")
+              td= profile.username
+              td= profile.firstName
+              td= profile.lastName
+              td= profile.email
+              td= profile.prettyCreatedAt
+              td= profile.prettyUpdatedAt

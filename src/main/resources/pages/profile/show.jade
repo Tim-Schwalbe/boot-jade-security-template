@@ -1,0 +1,40 @@
+extends ../layout/layout.jade
+block title
+  | template | Profile:&nbsp;
+  = "#{profile.firstName} #{profile.lastName}"
+block headline
+  = "Profile"
+block content
+  .row
+    .col-xs-12.col-sm-12.col-md-12.col-lg-12.col-xs-offset-0.col-sm-offset-0.col-md-offset-0.col-lg-offset-0.toppad
+      .panel.panel-info
+        .panel-heading
+          h3.panel-title #{profile.firstName} #{profile.lastName}
+        .panel-body
+          .row
+            .col-md-2.col-lg-2(align='center')
+
+            .col-md-5.col-lg-5
+              table.table.table-user-information
+                tbody
+                  tr
+                    td Vorname:
+                    td= profile.firstName
+                  tr
+                    td Nachname:
+                    td= profile.lastName
+                  tr
+                    td Benutzername:
+                    td= profile.username
+        .panel-footer
+          a.btn.btn-sm.btn-primary(href='mailto:#{profile.email}', data-original-title='Send Mail', data-toggle='tooltip', type='button')
+            i.glyphicon.glyphicon-envelope
+          span.pull-right
+            if authHelper.currentProfile.hasRole("ROLE_ADMIN") || authHelper.currentProfile.hasRole("ROLE_SUPERADMIN")
+              a.btn.btn-sm.btn-primary(href='#{_contextPath}/profile/#{profile.id}/edit', title='Edit', data-original-title='Edit this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-edit
+              a.btn.btn-sm.btn-danger(href="#{_contextPath}/profile/#{profile.id}/deactivate", title='Delete', data-original-title='Remove this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-remove
+            else
+              a.btn.btn-sm.btn-primary(href='#{_contextPath}/profile/edit', title='Edit', data-original-title='Edit this user', data-toggle='tooltip', type='button')
+                i.glyphicon.glyphicon-edit

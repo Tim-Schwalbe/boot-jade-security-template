@@ -1,0 +1,46 @@
+.container
+  .row
+    .col-xs-4.col-sm-4.col-md-4.col-lg-4
+    .col-xs-8.col-sm-8.col-md-8.col-lg-8
+      .col-xs-6.col-sm-6.col-md-6.col-lg-6
+        form.row(method="post", action=_contextPath.toString()+'/register', commandName="profileForm", enctype='multipart/form-data', data-toggle="validator")
+          input(type="hidden", name=_csrf.parameterName, value=_csrf.token)
+          .form-group
+          h5 Persönliche Daten:
+          .form-group
+            label.control-label(for='firstName') Vorname
+            input.form-control.focus(type='text', name='firstName', placeholder='Vorname', value=profile.firstName, required="true")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='lastName') Nachname
+            input.form-control(type='text', name='lastName', placeholder='Nachname', value=profile.lastName, required="true")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='username')
+              | Benutzername
+              span.label-hint  (min. 4, max 16 chars; a-z, A-Z, 0-9, -, _, .)
+            input.form-control(type='text', name='username', placeholder='Benutzername', value=profile.username, required="true", data-minlength="4", pattern="^[a-z0-9_-\.]{4,16}$")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='email') E-Mail
+            input.form-control(type='email', name='email', placeholder='E-Mail', value=profile.email, required="true")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='password')
+              | Passwort
+              span.label-hint  (min. 6 Zeichen)
+            input.form-control#password-field(type='password', name='password', placeholder='Passwort', data-minlength="6", required="true")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='password') Passwort bestätigen
+            input.form-control#password-confirmation-field(type='password', data-match-error="Upps, dass Passwort passt nicht", name='password_confirmation', placeholder='Passwort bestätigen', data-minlength="6", required='true', data-match="#password-field")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='avatar') Upload Profilbild
+            input#input.file(name='avatar', type='file', multiple='false', data-show-upload='false', data-show-caption='true')
+          .form-group
+            #submit
+            button.btn.btn-default(type='submit')
+              | Erstellen
+
+

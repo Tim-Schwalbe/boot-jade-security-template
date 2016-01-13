@@ -1,0 +1,57 @@
+/* FONTS */
+
+@font-face{
+    font-family:"Eurostile LT W01 Medium";
+    src:url("../fonts/eurostile/f7799177-ca74-46ea-b025-8f09fd62bbd5.eot?#iefix");
+    src:url("../fonts/eurostile/f7799177-ca74-46ea-b025-8f09fd62bbd5.eot?#iefix") format("eot"),url("../fonts/eurostile/7312baa6-517b-42c1-adb6-684f8205fe74.woff2") format("woff2"),url("../fonts/eurostile/107efc32-dbde-4122-8cce-09804dbd6b27.woff") format("woff"),url("../fonts/eurostile/ba131ef8-64e5-4aa7-87b9-8e296c81babf.ttf") format("truetype"),url("../fonts/eurostile/6c7b1a65-90a2-4c75-836d-fd765979640b.svg#6c7b1a65-90a2-4c75-836d-fd765979640b") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-Oblique";
+    src:url("../fonts/eurostile/886a7744-bf65-47ab-899a-fd945711ae7d.eot?#iefix");
+    src:url("../fonts/eurostile/886a7744-bf65-47ab-899a-fd945711ae7d.eot?#iefix") format("eot"),url("../fonts/eurostile/5cf30f4d-b119-4da7-9426-852e5730e04c.woff2") format("woff2"),url("../fonts/eurostile/4f930811-3f09-426f-a82f-bdb0cf2af86a.woff") format("woff"),url("../fonts/eurostile/0352033b-9caf-41c7-b1da-2f03ae972f53.ttf") format("truetype"),url("../fonts/eurostile/9d71d51d-0c0f-460e-af07-9b3a592886f2.svg#9d71d51d-0c0f-460e-af07-9b3a592886f2") format("svg");
+}
+@font-face{
+    font-family:"Eurostile LT W01 Demi";
+    src:url("../fonts/eurostile/244cc320-7c47-4dde-840a-6845ccd3f1d7.eot?#iefix");
+    src:url("../fonts/eurostile/244cc320-7c47-4dde-840a-6845ccd3f1d7.eot?#iefix") format("eot"),url("../fonts/eurostile/cbae329f-03bc-47e1-9926-705faf095f2c.woff2") format("woff2"),url("../fonts/eurostile/9ae65e56-1c19-4809-aeca-85a714dba123.woff") format("woff"),url("../fonts/eurostile/bf618234-ac48-4307-a221-479efb8abb91.ttf") format("truetype"),url("../fonts/eurostile/5feaa7be-4241-4568-9ef4-c8dbe36a4364.svg#5feaa7be-4241-4568-9ef4-c8dbe36a4364") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-DemiObli";
+    src:url("../fonts/eurostile/314055aa-981e-4532-ae23-2ee4ac68d8ac.eot?#iefix");
+    src:url("../fonts/eurostile/314055aa-981e-4532-ae23-2ee4ac68d8ac.eot?#iefix") format("eot"),url("../fonts/eurostile/8ad41309-3592-4f12-95de-e780e166df96.woff2") format("woff2"),url("../fonts/eurostile/f1d43891-53fd-4378-bda5-14ba0f2d27e1.woff") format("woff"),url("../fonts/eurostile/88f6fb9d-c858-4270-be84-c79ce0806f04.ttf") format("truetype"),url("../fonts/eurostile/082c26af-340e-465f-98fc-619add95cc40.svg#082c26af-340e-465f-98fc-619add95cc40") format("svg");
+}
+@font-face{
+    font-family:"Eurostile LT W01 Bold";
+    src:url("../fonts/eurostile/2875a4c5-c0c4-4832-a7fb-a5b061b74e36.eot?#iefix");
+    src:url("../fonts/eurostile/2875a4c5-c0c4-4832-a7fb-a5b061b74e36.eot?#iefix") format("eot"),url("../fonts/eurostile/c3619879-a6e0-4738-b021-d1d25eb7ff74.woff2") format("woff2"),url("../fonts/eurostile/789587e7-8c31-4431-9352-a6d402ed168e.woff") format("woff"),url("../fonts/eurostile/1d4bb752-c44e-4b94-8f59-337c93a3c296.ttf") format("truetype"),url("../fonts/eurostile/5c7a99f2-1760-495e-9fb8-23d9b962d378.svg#5c7a99f2-1760-495e-9fb8-23d9b962d378") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-BoldOutl";
+    src:url("../fonts/eurostile/44278400-b56d-4743-9acc-f3a0f24a4cf3.eot?#iefix");
+    src:url("../fonts/eurostile/44278400-b56d-4743-9acc-f3a0f24a4cf3.eot?#iefix") format("eot"),url("../fonts/eurostile/749ce13d-b2a4-4b8d-a56d-be83ef8d7e8d.woff2") format("woff2"),url("../fonts/eurostile/6c11d0be-2b9d-4f96-9413-2d5f77a277ef.woff") format("woff"),url("../fonts/eurostile/c48551ce-946c-447b-a293-1ec69d47338c.ttf") format("truetype"),url("../fonts/eurostile/1adda654-54ce-4848-8071-905847040e2a.svg#1adda654-54ce-4848-8071-905847040e2a") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-BoldObli";
+    src:url("../fonts/eurostile/8563afca-295d-4b5c-a868-4782824a788e.eot?#iefix");
+    src:url("../fonts/eurostile/8563afca-295d-4b5c-a868-4782824a788e.eot?#iefix") format("eot"),url("../fonts/eurostile/811a3081-9318-4c9f-81ef-87bf2e86f1af.woff2") format("woff2"),url("../fonts/eurostile/0ae7b4e6-c435-4943-a889-f3ccfc1ba274.woff") format("woff"),url("../fonts/eurostile/97ab57be-1a19-4138-b7f2-3335e7d5ed90.ttf") format("truetype"),url("../fonts/eurostile/13138981-0907-42b8-b38d-7394323221dc.svg#13138981-0907-42b8-b38d-7394323221dc") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-Cn";
+    src:url("../fonts/eurostile/ecd265f2-31a7-469d-8192-1474256e6273.eot?#iefix");
+    src:url("../fonts/eurostile/ecd265f2-31a7-469d-8192-1474256e6273.eot?#iefix") format("eot"),url("../fonts/eurostile/ab47ceb8-689c-49f3-9dbd-6d0eb82201d6.woff2") format("woff2"),url("../fonts/eurostile/96a0bba4-e636-42ce-9eaa-4d5066bdc6b9.woff") format("woff"),url("../fonts/eurostile/6b8348f7-bba3-4030-ac97-52524686c2c3.ttf") format("truetype"),url("../fonts/eurostile/afc409ca-eb18-4de0-aea9-9f9127f2977c.svg#afc409ca-eb18-4de0-aea9-9f9127f2977c") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-BoldCn";
+    src:url("../fonts/eurostile/cd00d065-b939-47a9-b826-456eff2915f7.eot?#iefix");
+    src:url("../fonts/eurostile/cd00d065-b939-47a9-b826-456eff2915f7.eot?#iefix") format("eot"),url("../fonts/eurostile/87e860e8-a29d-4cb7-9925-42b6c0b26373.woff2") format("woff2"),url("../fonts/eurostile/8947ab9b-a38b-4fe4-9a36-1bdd58af997c.woff") format("woff"),url("../fonts/eurostile/1b9f7584-2b5f-45d5-8e58-141bb3cf9cfd.ttf") format("truetype"),url("../fonts/eurostile/d7f323cf-6d25-45b4-b2b4-289c6701425b.svg#d7f323cf-6d25-45b4-b2b4-289c6701425b") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-Ex2";
+    src:url("../fonts/eurostile/aaefe22a-b1b6-47a7-9695-0211ccdb32bd.eot?#iefix");
+    src:url("../fonts/eurostile/aaefe22a-b1b6-47a7-9695-0211ccdb32bd.eot?#iefix") format("eot"),url("../fonts/eurostile/bce25d87-1f3c-4c1c-bcc9-2afd0fa8d955.woff2") format("woff2"),url("../fonts/eurostile/4c4362d1-7674-4e53-a249-7b1a25b4e9e9.woff") format("woff"),url("../fonts/eurostile/2fb749ff-5f5a-43e3-b7c3-3e11d08fb4fc.ttf") format("truetype"),url("../fonts/eurostile/09063c9b-bf25-4156-bace-c2dfdb87a87b.svg#09063c9b-bf25-4156-bace-c2dfdb87a87b") format("svg");
+}
+@font-face{
+    font-family:"EurostileLTW01-BoldEx2";
+    src:url("../fonts/eurostile/c1982565-45b6-44fa-84d5-bcdb29d746ea.eot?#iefix");
+    src:url("../fonts/eurostile/c1982565-45b6-44fa-84d5-bcdb29d746ea.eot?#iefix") format("eot"),url("../fonts/eurostile/1795961d-cc35-428a-949c-fabc323f0150.woff2") format("woff2"),url("../fonts/eurostile/8ede3053-a8ab-4a0e-9530-6d4a6fe7c728.woff") format("woff"),url("../fonts/eurostile/4f726320-7cfe-45f1-80a2-a0537d13b041.ttf") format("truetype"),url("../fonts/eurostile/db8323ee-a212-4238-b0b2-978d47160852.svg#db8323ee-a212-4238-b0b2-978d47160852") format("svg");
+}

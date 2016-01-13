@@ -1,0 +1,30 @@
+.row
+  .col-sm-5.col-sm-offset-4
+    actionUrl = _contextPath.toString()+"/profile/new"
+    if !newProfile
+      actionUrl = _contextPath.toString()+"/profile/"+profile.id+"/edit"
+    form.row(method="post", action=actionUrl, commandName="profileForm", enctype='multipart/form-data', data-toggle="validator")
+      if myProfile
+        input(type='hidden', name='myProfile', value="#{myProfile}")
+        input(type="hidden", name=_csrf.parameterName, value=_csrf.token)
+      .col-sm-12
+        .form-group
+          label.control-label(for='password')
+            | Password*
+            span.label-hint  (min. 6 characters)
+          input.form-control#password-field(type='password', name='password', placeholder='Password', data-minlength="6", required="true")
+          .help-block.with-errors
+        .form-group
+          label.control-label(for='password') Password confirmation*
+          input.form-control#password-confirmation-field(type='password', data-match-error="Whoops, passwords does not match", name='password_confirmation', placeholder='Password confirmation', data-minlength="6", required='true', data-match="#password-field")
+          .help-block.with-errors
+      .form-group
+        label.control-label(for='avatar') Upload avatar
+        input#input.file(name='avatar', type='file', multiple='false', data-show-upload='false', data-show-caption='true')
+    .form-group
+      .col-sm-12
+        button.btn.btn-default(type='submit')
+          if newProfile
+            | Create
+          else
+            | Save

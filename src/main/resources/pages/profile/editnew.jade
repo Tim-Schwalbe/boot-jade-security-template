@@ -1,0 +1,23 @@
+extends ../layout/layout.jade
+block title
+  | Profildaten
+block headline
+  | Profildaten
+block content
+  .row
+    .col-md-12
+      form.row(method="post", action='#{_contextPath}/profile/edit', method='post', commandName="profileForm", enctype='multipart/form-data', data-toggle="validator")
+        input(type='hidden', name='myProfile', value="#{myProfile}")
+        input(type="hidden", name=_csrf.parameterName, value=_csrf.token)
+        .col-sm-12
+          .form-group
+            label.control-label(for='firstName') Vorname*
+            input.form-control(type='text', name='firstName', placeholder='First Name', value=profile.firstName, required="true")
+            .help-block.with-errors
+          .form-group
+            label.control-label(for='lastName') Nachname
+            input.form-control(type='text', name='lastName', placeholder='Last Name', value=profile.lastName, required="true")
+            .help-block.with-errors
+          .form-group
+              button.btn.btn-default(type='submit')
+                | Aktualisieren
