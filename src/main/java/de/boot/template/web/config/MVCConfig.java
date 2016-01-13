@@ -42,11 +42,4 @@ public class MVCConfig extends WebMvcConfigurerAdapter {
                 registry.addInterceptor(pathInterceptor);
                 registry.addInterceptor(localeChangeInterceptor);
         }
-        @Override
-        public void addViewControllers(ViewControllerRegistry registry) {
-                registry.addViewController("/landingpage").setViewName("landingpage");
-                registry.addViewController("/").setViewName("home");
-                registry.addViewController("/hello").setViewName("hello");
-                registry.addViewController("/login").setViewName("login");
-        }
 }

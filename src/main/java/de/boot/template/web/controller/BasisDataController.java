@@ -51,7 +51,7 @@ public class BasisDataController {
     System.out.println("Profilname im Controller: " + firstName);
 
 
-    ModelAndView model = new ModelAndView("basisdata/showw");
+    ModelAndView model = new ModelAndView("basisdata/show");
     Profile profile = authHelper.getCurrentProfile();
     profile.setFirstName(firstName);
     profileService.update(profile);

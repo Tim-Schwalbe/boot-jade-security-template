@@ -41,53 +41,53 @@ public class AuthInterceptor extends HandlerInterceptorAdapter {
 
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
 
-        try {
-            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-
-            if (auth != null && !auth.getPrincipal().equals("anonymousUser")) {
-                Profile profile = (Profile) auth.getPrincipal();
-
-                if (!profile.hasRole(Role.ROLE_ADMIN_STRING) && !profile.hasRole(Role.ROLE_SUPERADMIN_STRING)) {
-                    Hibernate.initialize(profile);
-
-                    Map<String, String> pathVariables = (Map<String, String>) request
-                            .getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
-                    Map<String, String[]> requestParams = request.getParameterMap();
-
-                    Map<String, String> mergedParams = new HashMap<>();
-                    mergedParams.putAll(pathVariables);
-
-                    for (String key : requestParams.keySet()) {
-                        mergedParams.put(key, requestParams.get(key)[0]);
-                    }
-
-
-                    if (mergedParams.containsKey("profileId")) {
-                        Long profileId = Long.parseLong(mergedParams.get("profileId"));
-
-                        Profile calledProfile = profileService.findProfileById(profileId);
-
-                        if (!authHelper.getCurrentProfile().equals(calledProfile)) {
-                            throw new NotAuthorizedException(
-                                    "You are not authorized to work with product: " + calledProfile.getId(), "/tickets");
-                        }
-                    }
-
-                }
-            }
-        } catch (NotAuthorizedException nae) {
-            HttpSession session = request.getSession(false);
-            session.setAttribute("notification", nae.getMessage());
-            response.sendRedirect(request.getContextPath() + nae.getRedirectPath());
-            logger.error("User not authorized:\n" + nae);
-            return false;
-        } catch (Exception e) {
-            HttpSession session = request.getSession(false);
-            session.setAttribute("notification", "Something went wrong. Please try again!");
-            response.sendRedirect(request.getContextPath() + "/");
-            logger.error(e);
-            return false;
-        }
+//        try {
+//            Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+//
+//            if (auth != null && !auth.getPrincipal().equals("anonymousUser")) {
+//                Profile profile = (Profile) auth.getPrincipal();
+//
+//                if (!profile.hasRole(Role.ROLE_ADMIN_STRING) && !profile.hasRole(Role.ROLE_SUPERADMIN_STRING)) {
+//                    Hibernate.initialize(profile);
+//
+//                    Map<String, String> pathVariables = (Map<String, String>) request
+//                            .getAttribute(HandlerMapping.URI_TEMPLATE_VARIABLES_ATTRIBUTE);
+//                    Map<String, String[]> requestParams = request.getParameterMap();
+//
+//                    Map<String, String> mergedParams = new HashMap<>();
+//                    mergedParams.putAll(pathVariables);
+//
+//                    for (String key : requestParams.keySet()) {
+//                        mergedParams.put(key, requestParams.get(key)[0]);
+//                    }
+//
+//
+//                    if (mergedParams.containsKey("profileId")) {
+//                        Long profileId = Long.parseLong(mergedParams.get("profileId"));
+//
+//                        Profile calledProfile = profileService.findProfileById(profileId);
+//
+//                        if (!authHelper.getCurrentProfile().equals(calledProfile)) {
+//                            throw new NotAuthorizedException(
+//                                    "You are not authorized to work with product: " + calledProfile.getId(), "/tickets");
+//                        }
+//                    }
+//
+//                }
+//            }
+//        } catch (NotAuthorizedException nae) {
+//            HttpSession session = request.getSession(false);
+//            session.setAttribute("notification", nae.getMessage());
+//            response.sendRedirect(request.getContextPath() + nae.getRedirectPath());
+//            logger.error("User not authorized:\n" + nae);
+//            return false;
+//        } catch (Exception e) {
+//            HttpSession session = request.getSession(false);
+//            session.setAttribute("notification", "Something went wrong. Please try again!");
+//            response.sendRedirect(request.getContextPath() + "/");
+//            logger.error(e);
+//            return false;
+//        }
 
         return true;
     }
